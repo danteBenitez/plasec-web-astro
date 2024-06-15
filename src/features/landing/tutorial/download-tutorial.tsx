@@ -43,13 +43,22 @@ const STEPS = [
     imageUrl: "/tutorial-steps/3.png",
     description: (
       <p className="py-2 text-slate-600 font-normal">
-        Instala la aplicación y disfruta de todas las funcionalidades que te
-        ofrece.
+        Instala la aplicación
       </p>
     ),
   },
   {
     number: 4,
+    title: "Abre la aplicación",
+    imageUrl: "/tutorial-steps/5.png",
+    description: 
+      <p className="py-2 text-slate-600 font-normal">
+        Abre la aplicación, sea en el menú de aplicaciones o en la pantalla de inicio, si no lo hiciste
+        al instalarla.
+      </p>
+  },
+  {
+    number: 5,
     title: "Regístrate",
     imageUrl: "/tutorial-steps/6.png",
     description: (
