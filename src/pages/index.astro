@@ -1,0 +1,26 @@
+---
+import MainLayout from '@/layouts/main-layout';
+import '../index.css';
+import Home from './home';
+---
+
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Una plataforma para la seguridad comunitaria">
+  <meta name="keywords" content="Seguridad, comunidad, aplicación, incidentes, reportes, botón de pánico">
+  <title>PlaSeC</title>
+</head>
+
+<body>
+
+<MainLayout>
+    <Home client:load />
+</MainLayout>
+</body>
+
+</html>
