@@ -5,9 +5,9 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/shadcn/ui/navigation-menu";
 
+import { Logo } from "@/components/svg/logo";
 import { cn } from "@/lib/utils";
 import { Contact, User } from "lucide-react";
-import { Logo } from "@/components/svg/logo";
 import Offcanvas from "./offcanvas";
 
 const TABS = [
@@ -15,7 +15,9 @@ const TABS = [
   { label: "Contacto", href: "/contact", icon: Contact },
 ];
 
-export default function Header() {
+// We pass the offcanvas component as children on index.astro to render the offcanvas menu
+// and hydrate it with the navigation links
+export default function Header(props: { children: React.ReactNode }) {
   return (
     <header className="flex flex-wrap items-center justify-between border border-slate-200 px-2 md:px-4 py-2 text-4xl">
       <a
@@ -25,11 +27,17 @@ export default function Header() {
         <Logo className="w-[60px] h-[60px]" />
         <h1 className="font-sans-accent text-center">
           PlaSeC
-          <span className="sr-only">
-            Plataforma de seguridad comunitaria
-          </span>
+          <span className="sr-only">Plataforma de seguridad comunitaria</span>
         </h1>
       </a>
+      {props.children}
+    </header>
+  );
+}
+
+export function HeaderContent() {
+  return (
+    <>
       <Offcanvas>
         <NavigationMenu className="w-full flex flex-col justify-center h-full px-8 max-w-none">
           <div className="w-full h-full py-10">
@@ -45,22 +53,27 @@ export default function Header() {
         </NavigationMenu>
       </Offcanvas>
       <div className="hidden md:flex md:items-stretch content-center justify-items-center md:justify-center w-full lg:w-auto">
-        <NavigationMenu className="flex gap-6 h-100 items-center justify-center h-full list-none">
+        <NavigationMenu
+          className="flex gap-6 h-100 items-center justify-center h-full list-none"
+        >
           <ul className="flex gap-2 items-stretch">
             <PageLinks />
             <LoginLinks />
           </ul>
         </NavigationMenu>
       </div>
-    </header>
+    </>
   );
 }
 
-function LoginLinks() {
+export function LoginLinks() {
   const importantLinksClass = "border border-slate-200 md:px-4 w-full";
   return (
     <>
-      <NavigationMenuItem key={"/sign-up"} className="w-full h-full flex items-center ms-4">
+      <NavigationMenuItem
+        key={"/sign-up"}
+        className="w-full h-full flex items-center ms-4"
+      >
         <NavigationMenuLink
           href={"/sign-in"}
           className={`${cn(
@@ -87,14 +100,12 @@ function LoginLinks() {
   );
 }
 
-function PageLinks() {
+export function PageLinks() {
   return (
     <>
       {TABS.map((tab) => {
         return (
-          <NavigationMenuItem
-            key={tab.href}
-          >
+          <NavigationMenuItem key={tab.href}>
             <NavigationMenuLink
               href={tab.href}
               className={`${cn(

@@ -11,7 +11,7 @@ const FOOTER_LINKS = [
   },
   {
     icon: <FacebookIcon className="w-6 fill-white" />,
-    to: "https://www.instagram.com/plasec/",
+    to: "https://www.facebook.com/plasec/",
     text: "PlaSeC",
   },
 ];

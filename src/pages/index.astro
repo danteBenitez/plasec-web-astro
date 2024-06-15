@@ -1,4 +1,5 @@
 ---
+import Header, { HeaderContent } from '@/features/ui/header';
 import MainLayout from '@/layouts/main-layout';
 import '../index.css';
 import Home from './home';
@@ -19,7 +20,10 @@ import Home from './home';
 <body>
 
 <MainLayout>
-    <Home client:load />
+  <Header>
+    <HeaderContent client:load />
+  </Header>
+    <Home />
 </MainLayout>
 </body>
 
