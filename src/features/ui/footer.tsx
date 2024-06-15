@@ -40,7 +40,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="py-10 flex gap-14 justify-center md:justify-star w-full">
+        <div className="py-10 flex gap-14 justify-center md:justify-star w-full lg:w-auto">
           <div className="flex flex-col gap-5 justify-center md:justify-start">
             <h2 className="text-2xl font-bold">Compañía</h2>
             <ul className="flex flex-col gap-3">
