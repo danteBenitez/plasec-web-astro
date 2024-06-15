@@ -1,5 +1,4 @@
 import { type ReactNode } from 'react';
-import Header from "@/features/ui/header";
 
 export default function MainLayout(props: { children: ReactNode }) {
   return (

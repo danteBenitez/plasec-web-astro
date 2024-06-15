@@ -90,18 +90,4 @@ function HeroCard(props: HeroCardProps) {
   );
 }
 
-//
-function HeroTitle(props: { titleList: string[] }) {
-  return props.titleList.map((title) => {
-    return (
-      <h2
-        className={cn(
-          "text-[90px] md:text-[100px] text-bold font-sans-accent text-blue-600 animate-in fade-in-5"
-        )}
-        key={title}
-      >
-        {title}
-      </h2>
-    );
-  });
-}
+
