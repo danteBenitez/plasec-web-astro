@@ -67,7 +67,7 @@ function HeroCard(props: HeroCardProps) {
     <Card className="absolute top-28 left-8 w-[70%] md:w-[50%] max-h-4xl rounded-md shadow-md hover:scale-110 peer-hover:scale-110">
       <CardHeader className="flex flex-row items-center gap-2 border-b mb-2 py-4">
         <Avatar className="w-12 rounded-full overflow-hidden">
-          <AvatarImage src="/profile-photo.jpg" />
+          <img src="/profile-photo.jpg" />
         </Avatar>
         <div>
           <CardTitle className="rounded-full">{props.username}</CardTitle>
