@@ -20,6 +20,7 @@ const STEPS = [
           href="/app.apk"
           className="text-blue-500 underline"
           download={"app.apk"}
+          title="Descarga de la APK de PlaSeC"
         >
           click aquí
         </a>

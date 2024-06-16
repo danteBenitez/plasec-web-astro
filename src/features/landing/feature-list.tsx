@@ -20,7 +20,7 @@ const FEATURES = [
       "Reporta situaciones de peligro, accidentes, robos, entre otros, para informar a tu comunidad y a las autoridades. Registra una ubicación y un horario. Visualiza incidencias cercanas a ti y recibe notificaciones de las que te interesen",
   },
   {
-    img: <img src={"../feature-posts.svg"} className={commonClassName} />,
+    img: <img src={"../feature-posts.svg"} alt="Imagen alusiva a la publicación y comunicación entre ciudadanos" className={commonClassName} />,
     title: "Publicaciones en comunidad",
     description:
       "Comparte información relevante con tu comunidad, como alertas de seguridad, noticias, eventos, entre otros. Publica fotos, videos y texto. Comenta y reacciona a las publicaciones de otros usuarios",

@@ -16,8 +16,8 @@ export default function Offcanvas(props: { children: ReactNode }) {
   return (
     <div className="md:hidden">
       <NavigationMenu className={cn(open && "opacity-0 pointer-events-none", "list-none")}>
-        <NavigationMenuLink>
-          <button onClick={() => setOpen(true)}>
+        <NavigationMenuLink asChild>
+          <button onClick={() => setOpen(true)} name="Abrir menú de navegación">
             <MenuIcon />
           </button>
         </NavigationMenuLink>
@@ -31,10 +31,14 @@ export default function Offcanvas(props: { children: ReactNode }) {
         <div className="w-full flex items-center justify-end py-2 h-20 px-3">
           <NavigationMenu className={cn(!open && "hidden", "list-none z-[100]")}>
             <NavigationMenuLink
+              asChild
               className="cursor-pointer"
-              onClick={() => setOpen(false)}
             >
-              <XIcon />
+              <button title="Cerrar menú de navegación"
+                onClick={() => setOpen(false)}
+              >
+                <XIcon />
+              </button>
             </NavigationMenuLink>
           </NavigationMenu>
         </div>

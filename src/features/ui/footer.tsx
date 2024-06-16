@@ -57,9 +57,11 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {FOOTER_LINKS.map((link) => {
                 return (
-                  <FooterLink key={link.to} to={link.to}>
-                    {link.icon} {link.text}
-                  </FooterLink>
+                  <li>
+                    <FooterLink key={link.to} to={link.to}>
+                      {link.icon} {link.text}
+                    </FooterLink>
+                  </li>
                 );
               })}
             </ul>

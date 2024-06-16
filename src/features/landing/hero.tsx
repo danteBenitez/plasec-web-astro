@@ -16,9 +16,9 @@ export default function Hero() {
       <div className="grid grid-cols-1 grid-rows-[300_px_1fr] lg:grid-cols-2 lg:grid-rows-1 mx-6 md:mx-[10rem] min-h-[90vh] pt-8 md:pt-0">
         <div className="flex flex-col justify-center items-center md:items-start">
           <hgroup className="flex flex-col text-center lg:text-start">
-            <h1 className="text-[90px] leading-[1] md:text-[100px] text-bold font-sans-accent text-blue-600 mb-5">
+            <h2 className="text-[90px] leading-[1] md:text-[100px] text-bold font-sans-accent text-blue-600 mb-5">
               Protege tu seguridad
-            </h1>
+            </h2>
             <p className="text-xl font-sans font-thin lg:me-20">
               Previene a tu comunidad de hechos delictivos, envía alertas en
               tiempo real y recibe ayuda de la policía. PlaSeC es una plataforma
@@ -67,7 +67,7 @@ function HeroCard(props: HeroCardProps) {
     <Card className="absolute top-28 left-8 w-[70%] md:w-[50%] max-h-4xl rounded-md shadow-md hover:scale-110 peer-hover:scale-110">
       <CardHeader className="flex flex-row items-center gap-2 border-b mb-2 py-4">
         <Avatar className="w-12 rounded-full overflow-hidden">
-          <img src="/profile-photo.jpg" />
+          <img src="/profile-photo.jpg" alt="" />
         </Avatar>
         <div>
           <CardTitle className="rounded-full">{props.username}</CardTitle>
