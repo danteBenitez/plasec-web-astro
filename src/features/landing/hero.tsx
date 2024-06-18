@@ -26,9 +26,9 @@ export default function Hero() {
               situaciones de riesgo, protegiéndote a ti mismo y a la comunidad.
             </p>
           </hgroup>
-          <button className="text-white hover:bg-blue-700 px-4 py-2 my-5 bg-blue-600 rounded-md text-xl mx-auto lg:mx-0">
-            Regístrate
-          </button>
+          <a className="text-white hover:bg-blue-700 px-4 py-2 my-5 bg-blue-600 rounded-md text-xl mx-auto lg:mx-0 cursor-pointer" href="#download-tutorial">
+            Descargar ahora
+          </a>
         </div>
         <HeroImage />
       </div>

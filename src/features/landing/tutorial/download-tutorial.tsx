@@ -73,7 +73,7 @@ const STEPS = [
 
 export default function DownloadTutorial() {
   return (
-    <section className="flex flex-col justify-center items-center my-16">
+    <section className="flex flex-col justify-center items-center my-16" id="download-tutorial">
       <HeadingTitle as="h2" className="my-4 px-4">
         ¿Cómo descargar la aplicación?
       </HeadingTitle>
